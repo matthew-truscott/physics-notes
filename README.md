@@ -1,7 +1,8 @@
-Hi,
+# Physics Notes
 
-Welcome to the beginnings of Tufte LaTeX package to help you
-produce Tufte-style handouts, reports, and notes.
+Notes written in LATEX, currently working on quantum mechanics and classical mechanics. Ideas are to split things into formal math, conceptual knowledge and problem solving.
+
+The following is from Tufte-LATEX
 
 ## Quick Start
 
