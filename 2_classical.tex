@@ -314,23 +314,125 @@ One can use the method of Lagrange undetermined multipliers to solve for constra
 \end{equation}
 
 \section{Problems}
+
 \subsection{1. Shortest curve joining two points}
 \subsection{2. The brachistochrome}
 \subsection{3. Fermat's principle}
 \subsection{4. Total derivatives}
 
+\chapter{Particles}
+Before delving into the physical applications of variational calculus, it is useful to review our current knowledge of classical mechanics. Let $\vec{r}$ be the radius vector of a particle from some given origin and $\vec{v}$ its velocity, relative to this origin. The linear momentum of the particle is defined as
+
+\begin{equation}
+	\label{eq:12}
+	\vec{v} = \frac{d\vec{r}}{dt}
+\end{equation}
+
+Newton formalised classical mechanics into three laws,
+
+\begin{enumerate}
+	\item In an inertial reference frame, an object in equilibrium either remains at rest or moves at a constant velocity.
+	\item In an inertial reference frame, the net force acting on an object is related to the momentum of that object by
+	      \begin{equation}
+	      	\label{eq:NII}
+	      	\vec{F} = \frac{d\vec{p}}{dt}
+	      \end{equation}
+	\item Each force as an opposing reaction force of equal magnitude.
+\end{enumerate}
+
+Newton's second law can also be written as
+
+\begin{equation}
+	\label{eq:13}
+	\vec{F} = m\vec{a}
+\end{equation}
+
+where the mass is constant and a, the vector acceleration of the particle is defined as
+
+\begin{equation}
+	\label{eq:14}
+	\vec{a} = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2}
+\end{equation}
+
+The equation of motion is typically a differential equation of second order. Newton's second law also implies a conservation of momentum when the total force acting on a system is equal to zero. Particles also have angular momentum defined as
+
+\begin{equation}
+	\label{eq:15}
+	\vec{L} = \vec{r} \times \vec{p}
+\end{equation}
+
+about some origin reference point from which the vectors are defined. The torque or moment force is similarly defined
+
+\begin{equation}
+	\label{eq:16}
+	\vec{N} = \vec{r} \times \vec{F}
+\end{equation}
+
+From equation \ref{eq:NII} and equation \ref{eq:12}
+
+\begin{equation}
+	\label{eq:17}
+	\vec{N} = \vec{r} \times \frac{d}{dt}m\vec{v}
+\end{equation}
+
+Now consider the identity
+
+\begin{equation}
+	\label{eq:18}
+	\frac{d}{dt}(\vec{r}\times m\vec{v}) = \vec{v}\times m\vec{v} + \vec{r}\times\frac{d}{dt}(m\vec{v}) = \vec{r}\times\frac{d}{dt}(m\vec{v})
+\end{equation}
+
+Therefore
+
+\begin{equation}
+	\label{eq:19}
+	\vec{N} = \frac{d}{dt}(\vec{r} \times m\vec{v}) = \frac{d\vec{L}}{dt}
+\end{equation}
+
+The conservation of angular momentum follows, as long as the total torque on a system is zero, angular momentum is conserved. We can define the energy required to move a particle from point 1 to point 2 by some `work done',
+
+\begin{equation}
+	\label{eq:20}
+	W_{12} = \int^2_1 \vec{F}\cdot d\vec{s}
+\end{equation}
+
+For constant mass this reduces to
+
+\begin{equation}
+	\label{eq:21}
+	\int\vec{F}\cdot d\vec{s}
+\end{equation}
 
 
 
-
-	%%
-	% The back matter contains appendices, bibliographies, indices, glossaries, etc.
-	\backmatter
-
-	\bibliography{1_quantum}
-	\bibliographystyle{plainnat}
+\chapter{Lagrangian Formalism}
 
 
-	\printindex
+\section{Problems}
+\subsection{General Method}
+First pick a sensible coordinate system. Then write the Lagrangian in terms of the kinetic and potential energy components.
+
+\begin{equation}
+	L = T - U
+\end{equation}
+
+The kinetic energy can be calculated from the system by breaking down the system into components and then finding the velocity components for each object in the system. In cartesian components this becomes
+
+\begin{equation}
+	T = \frac{m}{2}\dot{x}^2+\dot{y}^2+\dot{z}^2
+\end{equation}
+
+Once the Lagrangian is found, one can use the Euler-Lagrange equations to find the equations of motion for the system.
+
+
+%%
+% The back matter contains appendices, bibliographies, indices, glossaries, etc.
+\backmatter
+
+\bibliography{1_quantum}
+\bibliographystyle{plainnat}
+
+
+\printindex
 
 \end{document}
