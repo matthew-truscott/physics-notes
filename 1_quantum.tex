@@ -599,9 +599,56 @@ We can directly use these postulates in probability problems. Now at any given t
 \begin{method}
 	\label{meth:2}
 	\begin{enumerate}
-		\item Con
+		\item Construct an operator built out of the quantum equivalents to the classical position and momentum terms. This is due to Ehrenfest's Theorem.
+		\item Find the orthonormal eigenvectors $\ket{\omega_i}$ and eigenvalues $\omega_i$ of $\Omega$.
+		\item Expand $\ket{\psi}$ in this basis, $\ket{\psi} = \sum_i\ket{\omega_i}\braket{\omega_i|\psi}$
+		\item The probability $P(\omega)$ that the result $\omega$ will be obtained is proportional to $|\braket{\omega|\psi}|^2$. In terms of the projection operator $P_{\omega} = \ket{\omega}\bra{\omega}$, this becomes $\braket{\psi|P_{\omega}|\psi} = \braket{\psi|P_{\omega}P_{\omega}|\psi} = \braket{P_{\omega}\psi|P_{\omega}\psi}$.
 	\end{enumerate}
 \end{method}
+
+To get an absolute probability out of the all the probilities, just normalize them. If a state is already an eigenstate, the measurement clearly just returns the corresponding eigenvalue. Superposition of states results in a distribution of the probabilities. For a different variable, the process is repeated for that variable. Since the bases of two variables $\Omega$ and $\Lambda$ are normally different, it is necessary to perform the following. If we are working in the $\Omega$ basis,
+
+\begin{equation}
+	\label{eq:29}
+	\ket{\psi} = \sum_i\ket{\omega_i}\braket{\omega_i|\psi}
+\end{equation}
+
+and $P(\omega_i) = |\braket{\omega_i|\psi}|^2$. If we want $P(\lambda_i)$, we take the operator $\Lambda$ which is some given matrix with elements $\Lambda_{ij} = \braket{\omega_i|\Lambda|\omega_j}$, find its eigenvectors $\ket{lambda_i}$ and take the inner product $\braket{\lambda_i|\psi}$ in this basis
+
+\begin{equation}
+	\label{eq:30}
+	\braket{\lambda_i|\psi} = \sum_j\braket{\lambda_i|\omega_j}\braket{\omega_j|\psi}
+\end{equation}
+
+If a variable is ambiguous, it does not commute, for example $\Omega = XP$ is ambiguous. In this case, we take the symmetric sum, $\Omega = (XP + PX)/2$. This fixes everything. If a variable is degenerate, it has multiple eigenvalues, say $\omega_1 = \omega_2 = \omega$. In this case the probability is found by selecting some orthonormal basis $\ket{\omega, 1}$ and $\ket{\omega, 2}$. Then
+
+\begin{equation}
+	\label{eq:31}
+	P(\omega) = |\braket{\omega, 1|\psi}|^2 + |\braket{\omega, 2|\psi}|^2
+\end{equation}
+
+In the case of continuous variables, the state expands over an integral instead of a sum. If the variable has no classical counterparts, a solution is a product of intuition and semi-classical reasoning. Since we are dealing with probabilities it makes sense to define expectation values and variances. The expectation value is defined
+
+\begin{equation}
+	\label{eq:32}
+	\langle\Omega\rangle = \sum_i P(\omega_i)\omega_i = \sum_i\braket{\psi|\omega_i}\braket{\omega_i|\psi}\omega_i
+\end{equation}
+
+However since $\omega_i\ket{\omega_i} = \Omega\ket{\omega_i}$,
+
+\begin{equation}
+	\label{eq:33}
+	\langle\Omega\rangle = \sum_i\braket{\psi|\Omega|\omega_i}\braket{\omega_i|\psi} = \braket{\psi|\Omega|\psi}
+\end{equation}
+
+The variance is defined
+
+\begin{equation}
+	\label{eq:34}
+	\Delta\Omega^2 = \langle(\Omega-\langle\Omega\rangle)^2\rangle
+\end{equation}
+
+
 
 
 %%
