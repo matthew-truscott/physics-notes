@@ -260,40 +260,40 @@ One can define a set of linearly independent vectors as basis vectors and write 
 \end{definition}
 
 \begin{axiom}
-  \label{ax:9}
-  The adjoint of a bra vector is a ket vector. The adjoint of a ket vector is a bra vector: $\ket{A}^{\dag} = \bra{A}$.
+	\label{ax:9}
+	The adjoint of a bra vector is a ket vector. The adjoint of a ket vector is a bra vector: $\ket{A}^{\dag} = \bra{A}$.
 \end{axiom}
 \begin{axiom}
-  \label{ax:10}
-  The adjoint of a number is its complex conjugate, $a^{\dag} = a^*$.
+	\label{ax:10}
+	The adjoint of a number is its complex conjugate, $a^{\dag} = a^*$.
 \end{axiom}
 
 \begin{definition}
-  \label{def:3}
-  The inner product is a function that takes in a bra and a ket vector in that order, and returns a scalar. It satisfies the following axioms
+	\label{def:3}
+	The inner product is a function that takes in a bra and a ket vector in that order, and returns a scalar. It satisfies the following axioms
 \end{definition}
 
 \begin{axiom}
-  \label{ax:11}
-  $\braket{A|B} = \braket{B|A}^*$
+	\label{ax:11}
+	$\braket{A|B} = \braket{B|A}^*$
 \end{axiom}
 \begin{axiom}
-  \label{ax:12}
-  The inner product of a vector with itself is greater than zero, or equal if the vector is the null vector.
+	\label{ax:12}
+	The inner product of a vector with itself is greater than zero, or equal if the vector is the null vector.
 \end{axiom}
 \begin{axiom}
-  \label{ax:13}
-  The inner product satisfies distributivity, $\bra{C}(a\ket{A} + b\ket{B}) \equiv \braket{C|aA + bB} = a\braket{C|A} + b\braket{C|B}$.
+	\label{ax:13}
+	The inner product satisfies distributivity, $\bra{C}(a\ket{A} + b\ket{B}) \equiv \braket{C|aA + bB} = a\braket{C|A} + b\braket{C|B}$.
 \end{axiom}
 
 \begin{definition}
-  \label{def:4}
-  The norm of a vector equal to the square root of the inner product of the vector with itself, $\norm{A} = \sqrt{\braket{A|A}}$.
+	\label{def:4}
+	The norm of a vector equal to the square root of the inner product of the vector with itself, $\norm{A} = \sqrt{\braket{A|A}}$.
 \end{definition}
 
 \begin{definition}
-  \label{def:5}
-  The kronecker delta function takes in two variables and returns 1 for equality and 0 otherwise. It is useful since writing the inner product between two basis vectors is essentially the kronecker delta function, if the basis is orthonormal.
+	\label{def:5}
+	The kronecker delta function takes in two variables and returns 1 for equality and 0 otherwise. It is useful since writing the inner product between two basis vectors is essentially the kronecker delta function, if the basis is orthonormal.
 \end{definition}
 
 One can write the inner product between two vectors as
@@ -335,13 +335,13 @@ The Gram-Schmidt process is a way of orthonormalizing a set of vectors in an inn
 An operator is a transformer for vectors and can be represented as a matrix. Operators take in a vector and output a new vector. They are linear and thus obey standard linearity rules.
 
 \begin{definition}
-  \label{def:6}
-  The commutator takes in two operators and returns 0 if the operators commute. It is defined by $\commutator{\Omega}{\Lambda} \equiv \Omega\Lambda - \Lambda\Omega$.
+	\label{def:6}
+	The commutator takes in two operators and returns 0 if the operators commute. It is defined by $\commutator{\Omega}{\Lambda} \equiv \Omega\Lambda - \Lambda\Omega$.
 \end{definition}
 
 \begin{definition}
-  \label{def:7}
-  The inverse of an operator works like any other inverse, $\Omega\Omega^{-1}$, and is multiplicative.
+	\label{def:7}
+	The inverse of an operator works like any other inverse, $\Omega\Omega^{-1}$, and is multiplicative.
 \end{definition}
 
 Additionally,
@@ -371,8 +371,8 @@ Vector transformation can be expressed as
 \end{definition}
 
 \begin{definition}
-  \label{def:9}
-  Define the projection operator as one that projects a vector into the direction of a basis vector. So the projection operator is the same as taking components! The sum of the projection operators gives the identity operator, $I = \sum P_i$, $P_i\ket{A} = \ket{i}\braket{i|A} = \ket{i}a_i$.
+	\label{def:9}
+	Define the projection operator as one that projects a vector into the direction of a basis vector. So the projection operator is the same as taking components! The sum of the projection operators gives the identity operator, $I = \sum P_i$, $P_i\ket{A} = \ket{i}\braket{i|A} = \ket{i}a_i$.
 \end{definition}
 
 A result of definition \ref{def:2} is that
@@ -390,13 +390,13 @@ and
 \end{equation}
 
 \begin{definition}
-  \label{def:10}
-  A Hermitian operator is self-adjoint, that is, the adjoint of a Hermitian operator is equal to the original Hermitian operator. The adjoint of an Antihermitian operator is the equal to the negative original Hermitian operator. One can write any operator in Hermitian and Antihermitian parts. The Hermitian component is the sum of the operator with its adjoint over two, and the Antihermitian is the difference of those two operators over two. The eigenvalues of a Hermitian operator are real.
+	\label{def:10}
+	A Hermitian operator is self-adjoint, that is, the adjoint of a Hermitian operator is equal to the original Hermitian operator. The adjoint of an Antihermitian operator is the equal to the negative original Hermitian operator. One can write any operator in Hermitian and Antihermitian parts. The Hermitian component is the sum of the operator with its adjoint over two, and the Antihermitian is the difference of those two operators over two. The eigenvalues of a Hermitian operator are real.
 \end{definition}
 
 \begin{definition}
-  \label{def:11}
-  A Unitary operator acts on its adjoint to produce the identity operator. Hence it preserves the inner product and vectors in such operators are orthonormal. When I write vectors in operators, I mean, when you take columns of the matrix.
+	\label{def:11}
+	A Unitary operator acts on its adjoint to produce the identity operator. Hence it preserves the inner product and vectors in such operators are orthonormal. When I write vectors in operators, I mean, when you take columns of the matrix.
 \end{definition}
 
 When an operator acts on a vector, it is referred to as an active transformation. When one sandwiches an operator between two unitary operators, it is referred to as a passive transformation. Finally since operators are like matrices, they have eigenvalues and eigenvectors. The eigenvalues of a Hermitian operator are real. Matrices can also be diagonalized, if they are Hermitian. The eigenvectors of such operators can form unitary matrices once normalized. The passive transformation of a Hermitian operator with these unitary matrices results in diagonalization. Once diagonalized, the diagonal components are the eigenvalues of the operator. Two commuting Hermitian operators can be simultaneously diagonalized. If an operator is Hermitian, a function of such an operator can be diagonalized and its diagonal components are simply the function on each component of the original diagonal matrix.
@@ -404,8 +404,8 @@ When an operator acts on a vector, it is referred to as an active transformation
 We can generalize all this to continuous space, sums change to integrals and the kronecker delta becomes a dirac delta function defined by
 
 \begin{definition}
-  \label{def:12}
-  The dirac delta takes in $x$ and $x'$ and return 0 unless they equal, the integral of this function is equal to one.
+	\label{def:12}
+	The dirac delta takes in $x$ and $x'$ and return 0 unless they equal, the integral of this function is equal to one.
 \end{definition}
 
 This acts on functions like
@@ -435,8 +435,8 @@ Vectors on basis vectors become functions on variables, operators on vectors bec
 \end{equation}
 
 \begin{definition}
-  \label{def:13}
-  The differential operator is labeled D and unsurprisingly, it differentiates a function, $D\ket{f} = \ket{\frac{df}{dx}}$. Here, $x$ is some position space.
+	\label{def:13}
+	The differential operator is labeled D and unsurprisingly, it differentiates a function, $D\ket{f} = \ket{\frac{df}{dx}}$. Here, $x$ is some position space.
 \end{definition}
 
 Consider the combination $\braket{x|D|f}$. The functional acts on a function, by definition \ref{def:13} and then the result acts on the basis vector to give $df(x)/dx$. The functional can also act on two basis vectors (assume they are in different bases). This deduction can be made by inserting identity to $\braket{x|D|f}$.
@@ -449,13 +449,13 @@ Consider the combination $\braket{x|D|f}$. The functional acts on a function, by
 This operator is not particularly useful because it is not Hermitian. We want to deal with Hermitian operators because they give measureable results, such operators are often called observables.
 
 \begin{definition}
-  \label{def:14}
-  The operator K is defined by $K = -iD$ and is Hermitian. This operator generates k-space.
+	\label{def:14}
+	The operator K is defined by $K = -iD$ and is Hermitian. This operator generates k-space.
 \end{definition}
 
 \begin{definition}
-  \label{def:15}
-  The operator X generates x-space. It has the effect of multiplying $f(x)$ by $x$.
+	\label{def:15}
+	The operator X generates x-space. It has the effect of multiplying $f(x)$ by $x$.
 \end{definition}
 
 These two operators also have the eigenvalue equations
@@ -486,9 +486,9 @@ To find constructions of mixed states, we must add in as many identities as nece
 
 \begin{align*}
 	\braket{x|K|k'} &= k\braket{x|k}\\
-	\int\braket{x|K|x'}\braket{x'|k}dx' &= k\psi_k(x) & \ref{def:8}\\
-	\int -i\delta(x-x')\frac{d}{dx'}\psi_k(x) &= k\psi_k(x) & \ref{eq:12}\\
-	-i\frac{d}{dx}\psi_k(x) &= k\psi_k(x) & \ref{eq:dd}\\
+	\int\braket{x|K|x'}\braket{x'|k}dx'       & = k\psi_k(x) & \ref{def:8} \\
+	\int -i\delta(x-x')\frac{d}{dx'}\psi_k(x) & = k\psi_k(x) & \ref{eq:12} \\
+	-i\frac{d}{dx}\psi_k(x)                   & = k\psi_k(x) & \ref{eq:dd} \\
 	\psi_k(x) &= Ae^{ikx}
 \end{align*}
 
@@ -500,9 +500,9 @@ The last step immediately follows and defines $\braket{x|k}$. After normalizatio
 \end{equation}
 
 \begin{align*}
-	\braket{k|X|k'} &= \infint\infint\braket{k|x}\braket{x|X|x'}\braket{x'|k'}dxdx' & \ref{def:8}\\
-	&= \frac{1}{2\pi}\infint\infint e^{-ikx}x\delta(x-x')e^{ik'x'}dxdx' & \ref{eq:17}, \ref{eq:16}\\
-	&= \frac{1}{2\pi}\infint e^{-ikx}xe^{ikx}dx & \ref{eq:dd}\\
+	\braket{k|X|k'} & = \infint\infint\braket{k|x}\braket{x|X|x'}\braket{x'|k'}dxdx'     & \ref{def:8}              \\
+	                & = \frac{1}{2\pi}\infint\infint e^{-ikx}x\delta(x-x')e^{ik'x'}dxdx' & \ref{eq:17}, \ref{eq:16} \\
+	                & = \frac{1}{2\pi}\infint e^{-ikx}xe^{ikx}dx                         & \ref{eq:dd}              \\
 	&= i\frac{d}{dk}\left(\frac{1}{2\pi}\infint e^{i(k'-k)}dx\right) \\
 	&= i\delta'(k-k')
 \end{align*}
@@ -566,45 +566,52 @@ Thus the relations
 
 \chapter{The Postulates of Quantum Mechanics}
 \begin{definition}
-  \label{def:16}
+	\label{def:16}
 	The momentum is related to the k we defined earlier by $p = \hbar k$
 \end{definition}
 
 There are four postulates of quantum mechanics.
 \begin{definition}
-  \label{def:17}
-  Postulate 1. The state of a particle is represented by a vector $\ket{\psi(t)}$ in a Hilbert space.
+	\label{def:17}
+	Postulate 1. The state of a particle is represented by a vector $\ket{\psi(t)}$ in a Hilbert space.
 \end{definition}
 \begin{definition}
-  \label{def:18}
-  Postulate 2. The independent variables $x$ and $p$ of classical mechanics are represented by Hermitian operators $X$ and $P$ with the following matrix elements in the eigenbasis of $X$
+	\label{def:18}
+	Postulate 2. The independent variables $x$ and $p$ of classical mechanics are represented by Hermitian operators $X$ and $P$ with the following matrix elements in the eigenbasis of $X$
 	\[\braket{x|X|x'} = x\delta(x-x')\]
 	\[\braket{x|P|x'} = -i\hbar\delta'(x-x')\]
 	The operators corresponding to dependent variables $\omega(x, p)$ are given Hermitian operators
 	\[\Omega(X, P) = \omega(x\rightarrow X, p\rightarrow P)\]
 \end{definition}
 \begin{definition}
-  \label{def:19}
-  Postulate 3. If the particle is in a state $\ket{\psi}$, measurement of the variable corresponding to $\Omega$ will yield one of the eigenvalues $\omega$ with probability $P(\omega)\propto|\braket{\omega|\psi}|^2$. The state of the system will change from $\psi$ to $\omega$ as a result of the measurement.
+	\label{def:19}
+	Postulate 3. If the particle is in a state $\ket{\psi}$, measurement of the variable corresponding to $\Omega$ will yield one of the eigenvalues $\omega$ with probability $P(\omega)\propto|\braket{\omega|\psi}|^2$. The state of the system will change from $\psi$ to $\omega$ as a result of the measurement.
 \end{definition}
 \begin{definition}
-  \label{def:20}
-  Postulate 4. The state vector obeys the Schrodinger equation
+	\label{def:20}
+	Postulate 4. The state vector obeys the Schrodinger equation
 	\[i\hbar\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)}\]
 	where H is the quantum Hamiltonian operator.
 \end{definition}
 
 We can directly use these postulates in probability problems. Now at any given time, instead of having definite states, entities will be in a superposition of states. For a given state, one can find out the possible results of measuring some observable at that very moment or any subsequent moment, as well as the associated probabilities.
 
+\begin{method}
+	\label{meth:2}
+	\begin{enumerate}
+		\item Con
+	\end{enumerate}
+\end{method}
 
-	%%
-	% The back matter contains appendices, bibliographies, indices, glossaries, etc.
-	\backmatter
 
-	\bibliography{1_quantum}
-	\bibliographystyle{plainnat}
+%%
+% The back matter contains appendices, bibliographies, indices, glossaries, etc.
+\backmatter
+
+\bibliography{1_quantum}
+\bibliographystyle{plainnat}
 
 
-	\printindex
+\printindex
 
 \end{document}
