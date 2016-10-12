@@ -703,7 +703,40 @@ If a state is Gaussian, normalizing it takes some work, the Gaussian integral is
 	\]
 \end{proof}
 
-	
+Assume
+
+\begin{equation}
+	\label{eq:38}
+	\ket{\psi} = Ae^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\end{equation}
+
+Normalizing,
+
+\begin{equation}
+	\label{eq:39}
+	1 = \braket{\psi|\psi} = \infint \braket{\psi|x}{x|\psi}dx = \infint|\psi(x)|^2dx
+\end{equation}
+
+\begin{equation}
+	\label{eq:40}
+	1 = \infint A^2e^{-\frac{(x-\mu)^2}{\sigma^2}}dx = A^2(\pi\sigma^2)^{1/2}
+\end{equation}
+
+Hence
+
+\begin{equation}
+	\label{eq:41}
+	\psi(x) = \frac{1}{(\pi\sigma^2)^{1/4}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\end{equation}
+
+and the probability of finding a particle between $x$ and $x + dx$ is
+
+\begin{equation}
+	\label{eq:42}
+	P(x)dx = |\psi(x)|^2 = \frac{1}{(\pi\sigma^2)^{1/2}}e^{-\frac{(x-\mu)^2}{\sigma^2}}dx
+\end{equation}
+
+
 
 
 
