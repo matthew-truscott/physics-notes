@@ -1,0 +1,34 @@
+States time evolve according to the Schrodinger equation:
+
+\begin{equation}
+	\label{eq:tdse}
+	i\hbar\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)}
+\end{equation}
+
+For a given Hamiltonian $H = T + U$, we convert the classical expression with an equivalent quantum one, substitute this in, and then solve. If H has no explicit time dependence, the equation
+
+\begin{equation}
+	\label{eq:s1}
+	i\hbar\ket{\dot{\psi}} = H\ket{\psi}
+\end{equation}
+
+The approach is to find the eigenvalues and eigenvectors of the Hamiltonian and then construct the propagator $U(t)$ in terms of these. Once we have $U(t)$, we can write
+
+\begin{equation}
+	\label{eq:s2}
+	\ket{\psi(t)} = U(t)\ket{\psi(0)}
+\end{equation}
+
+Since the Schrodinger equation is first order in time, initial state value is sufficient and the initial value of the derivative is not required. Hence we solve the time-independent Schrodinger equation (which gives us eigenkets and eigenvalues)
+
+\begin{equation}
+	\label{eq:tise}
+	H\ket{E} = E\ket{E}
+\end{equation}
+
+And assuming we find these, expand the state
+
+\begin{equation}
+	\label{eq:s3}
+	\ket{\psi(t)}
+\end{equation}
