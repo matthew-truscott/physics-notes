@@ -645,9 +645,65 @@ The variance is defined
 
 \begin{equation}
 	\label{eq:34}
-	\Delta\Omega^2 = \langle(\Omega-\langle\Omega\rangle)^2\rangle
+	(\Delta\Omega)^2 = \langle(\Omega-\langle\Omega\rangle)^2\rangle
 \end{equation}
 
+In the discrete case, this is
+
+\begin{equation}
+	\label{eq:35}
+	(\Delta\Omega)^2 = \sum_iP(\omega_i)(\omega_i-\langle\Omega\rangle)^2
+\end{equation}
+
+The continuous case trivially follows
+
+\begin{equation}
+	\label{eq:36}
+	(\Delta\Omega)^2 = \int P(\omega)(\omega-\langle\Omega\rangle)^2d\omega
+\end{equation}
+
+and given the state and the operator
+
+\begin{equation}
+	\label{eq:37}
+	\Delta\Omega = [\braket{\psi|(\Omega - \langle\Omega\rangle)^2|\psi}]^{1/2}
+\end{equation}
+
+Now we attempt to recreate some multiple filtering process that takes a state and produces a new state with well defined eigenvalues for two variables. The issue being that normally we find eigenvalues for the variables, but every time we measure a value, the state changes. The simple way to bypass this issue is to say the states must be the same for the two variables. That is, the variables themselves commute. If they do, they are compatible and measuring one does not affect the measurement of the other.
+
+It is more likely that ensembles do not share the same state. We effectively want to build a wave packet rather than ordinary waves.
+
+\begin{definition}
+	\label{def:21}
+	The Gaussian distribution is defined in a few ways. It is the distribution with maximum entropy for a given mean and variance. It also minimizes the uncertainty of quantum mechanical systems. It can be written (calling the mean $\mu$ and the standard deviation $\sigma$)
+	\[
+		f(x|\mu,\sigma^2)	= Ae^{-\frac{(x-\mu)^2}{2\sigma^2}}
+	\]
+\end{definition}
+
+If a state is Gaussian, normalizing it takes some work, the Gaussian integral is standard, and the trick is to convert the one-dimensional problem in a two-dimension polar-coordinate problem
+
+\begin{equation}
+	\label{eq:gauss}
+	\infint e^{-ax^2}dx = \sqrt{\pi/a}
+\end{equation}
+
+\begin{proof}
+	Consider
+	\[
+		I(a) = \infint e^{-ax^2}dx
+	\]
+	Now square this
+	\[
+		I(a)^2 = \infint e^{-ax^2}dx \infint e^{-ay^2}dy = \infint\infint e^{-a(x^2+y^2)}dxdy
+	\]
+	Switching to polar coordinates
+	\[
+		I(a)^2 = \infint \int^{2\pi}_{0}e^{-a\rho^2}\rho d\rho d\phi = \frac{\pi}{a}
+	\]
+\end{proof}
+
+	
 
 
 
