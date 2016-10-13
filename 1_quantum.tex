@@ -738,9 +738,101 @@ and the probability of finding a particle between $x$ and $x + dx$ is
 
 One can find the mean to be $\mu$ as expected and the standard deviation to be $\sigma/\sqrt{2}$. In order to find say $\braket{p|\psi}$, we written
 
+\begin{align*}
+	\braket{p|\psi} &= \int\braket{p|x}\braket{x|\psi}dx \\
+	&= \int\psi^*_p(x)\psi(x)dx \\
+	&= \infint \frac{e^{ipx/\hbar}}{(2\pi\hbar)^{1/2}}\frac{e^{-(x-\mu)^2/2\sigma^2}}{(\pi\sigma^2)^{1/4}} \\
+	&= \left(\frac{\sigma^2}{\pi\hbar^2}\right)^{1/4}e^{-ip\mu/\hbar}e^{-p^2\sigma^2/2\hbar^2}
+\end{align*}
+
+The modulus of $\hbar(p)$ is a Gaussian of width $\hbar/\sigma\sqrt{2}$, this is the standard deviation, the mean is zero. Hence the famous uncertainty inequality because equality in the Gaussian case
+
 \begin{equation}
 	\label{eq:43}
-	\braket{p|\psi} = \int\braket{p|x}\braket{x|\psi}
+	\sigma_x\sigma_p = \hbar/2
+\end{equation}
+
+States time evolve according to the Schrodinger equation:
+
+\begin{equation}
+	\label{eq:tdse}
+	i\hbar\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)}
+\end{equation}
+
+For a given Hamiltonian $H = T + U$, we convert the classical expression with an equivalent quantum one, substitute this in, and then solve. If H has no explicit time dependence, the equation
+
+\begin{equation}
+	\label{eq:s1}
+	i\hbar\ket{\dot{\psi}} = H\ket{\psi}
+\end{equation}
+
+The approach is to find the eigenvalues and eigenvectors of the Hamiltonian and then construct the propagator $U(t)$ in terms of these. Once we have $U(t)$, we can write
+
+\begin{equation}
+	\label{eq:s2}
+	\ket{\psi(t)} = U(t)\ket{\psi(0)}
+\end{equation}
+
+Since the Schrodinger equation is first order in time, initial state value is sufficient and the initial value of the derivative is not required. Hence we solve the time-independent Schrodinger equation (which gives us eigenkets and eigenvalues)
+
+\begin{equation}
+	\label{eq:tise}
+	H\ket{E} = E\ket{E}
+\end{equation}
+
+And assuming we find these, expand the state
+
+\begin{equation}
+	\label{eq:s3}
+	\ket{\psi(t)} = \sum\ket{E}\braket{E|\psi(t)} \equiv \sum a_E(t)\ket{E}
+\end{equation}
+
+The equation for $a_E(t)$ follows if we act on both sides with $i\hbar\partial/\partial t - H$
+
+\begin{equation}
+	0 = (i\hbar\partial/\partial t - H)\ket{\psi(t)} = \sum(i\hbar\dot{a}_E - Ea_E)\ket{E}
+\end{equation}
+
+Hence due to the fact that the kets are linearly independent
+
+\begin{equation}
+	\label{eq:s4}
+	i\hbar\dot{a}_E = Ea_E
+\end{equation}
+
+Trivially this has the solution
+
+\begin{equation}
+	\label{eq:s5}
+	a_E(t) = a_E(0)e^{-iEt/\hbar}
+\end{equation}
+
+\begin{equation}
+	\label{eq:s6}
+	\braket{E|\psi(t)} = \braket{E|\psi(0)}e^{-iEt/\hbar}
+\end{equation}
+
+Hence
+
+\begin{equation}
+	\label{eq:s7}
+	\ket{\psi(t)} = \sum_E\ket{E}\braket{E|\psi(0)}e^{-iEt/\hbar}
+\end{equation}
+
+\begin{equation}
+	\label{eq:s8}
+	U(t) = \sum_E\ket{E}\bra{E}e^{-iEt/\hbar}
+\end{equation}
+
+In the case of degeneracy
+
+\begin{equation}
+	\label{eq:s9}
+	U(t) = \sum_{\alpha}\sum_E\ket{E, \alpha}\bra{E, \alpha}e^{-iEt/\hbar}
+\end{equation}
+
+If $E$ is continuous, the sum must be replaced by an integral. The normal modes
+
 
 
 
