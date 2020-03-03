@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{tensor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+
+\section{Newtonian Curvature}
+The equations that describe Newtonian Curvature can be derived by imagining the difference in acceleration between different particles
+on a sphere. In geometric units, the acceleration due to gravity is
+
+\[
+    a = \frac{Gm_c}{c^2 r^2}
+\]
+
+For two particles separated by $\xi$ perpendicular to the radial direction, their acceleration lines converge with an angle $\xi / r$. 
+For a separation parallel to the radial direction, consider the difference in acceleration for a distance $r$ and $r + \xi$. 
+
+Space components of geodesic deviation:
+
+\begin{equation}
+    \frac{d^2\xi}{d\tau^2} + \tensor{R}{^k_0_j_0}\xi^j = 0
+\end{equation}
+
+where for Newtonian Curvature,
+
+\begin{equation}
+    \begin{Vmatrix}
+        \tensor{R}{^{\hat{x}}_{\hat{0}}_{\hat{x}}_{\hat{0}}} &
+        \tensor{R}{^{\hat{y}}_{\hat{0}}_{\hat{x}}_{\hat{0}}} &
+        \tensor{R}{^{\hat{z}}_{\hat{0}}_{\hat{x}}_{\hat{0}}} \\
+        \tensor{R}{^{\hat{x}}_{\hat{0}}_{\hat{y}}_{\hat{0}}} &
+        \tensor{R}{^{\hat{y}}_{\hat{0}}_{\hat{y}}_{\hat{0}}} &
+        \tensor{R}{^{\hat{z}}_{\hat{0}}_{\hat{y}}_{\hat{0}}} \\
+        \tensor{R}{^{\hat{x}}_{\hat{0}}_{\hat{z}}_{\hat{0}}} &
+        \tensor{R}{^{\hat{y}}_{\hat{0}}_{\hat{z}}_{\hat{0}}} &
+        \tensor{R}{^{\hat{z}}_{\hat{0}}_{\hat{z}}_{\hat{0}}} \\
+    \end{Vmatrix}
+    =
+    \begin{Vmatrix}
+        m/r^3 & 0 & 0 \\
+        0 & m/r^3 & 0 \\
+        0 & 0 & -2m/r^3 \\
+    \end{Vmatrix}
+\end{equation}
+
+\end{document}
